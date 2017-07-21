@@ -1,0 +1,22 @@
+﻿/* cssBase
+ * Keillion@dynamsoft.com
+ */
+/* cssReset http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/*ie6,7 button width*/
+button {*width:auto;*overflow:visible;}
+/*ie6,7 fixed twinkling*/
+html,body{*background-image:url(about:blank);*background-attachment:fixed;}
+/* Using border-box, boxsizing.htc is required for ie6-7. */
+* {-webkit-box-sizing: border-box;-moz-box-sizing:border-box;box-sizing: border-box;/**behavior: url(css/common/boxsizing.htc);*/}
+/*select,input{*behavior:none;}*/
+/**/
+button {cursor:pointer;padding:0;outline:none;}
+input[type='checkbox'], input[type='radio'] {vertical-align:text-top;}
+/*util*/
+/*@font-face { font-family: OpenSans-Light; src: url('../font/OpenSans-Light.eot'); src: local('☺'), url('../font/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../font/OpenSans-Light.woff') format('woff'), url('../font/OpenSans-Light.ttf') format('truetype'), url('../font/OpenSans-Light.svg#webfontOTINA1xY') format('svg'); font-weight: normal; font-style: normal; }*/
+/*@font-face { font-family: OpenSans-Regular; src: url('../font/OpenSans-Regular.eot'); src: local('☺'), url('../font/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../font/OpenSans-Regular.woff') format('woff'), url('../font/OpenSans-Regular.ttf') format('truetype'), url('../font/OpenSans-Regular.svg#webfontOTINA1xY') format('svg'); font-weight: normal; font-style: normal; }*/
+/*@font-face { font-family: OpenSans-Semibold; src: url('../font/OpenSans-Semibold.eot'); src: local('☺'), url('../font/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../font/OpenSans-Semibold.woff') format('woff'), url('../font/OpenSans-Semibold.ttf') format('truetype'), url('../font/OpenSans-Semibold.svg#webfontOTINA1xY') format('svg'); font-weight: normal; font-style: normal; }*/
+.inline-block{display:inline-block;*zoom:1;*display:inline;}
+.position-fixed-cm{position:fixed;margin:auto;left:0;top:0;right:0;bottom:0;*left:50%;*top:50%;/*width:200px;height:200px;*margin-left:-100px;*margin-top:-100px;*/_position:absolute;_top:expression(eval(document.documentElement.scrollTop + document.documentElement.clientHeight/2))}
+label.forCkBoxOrRadio{cursor:pointer;-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;}
