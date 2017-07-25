@@ -20,3 +20,4 @@ input[type='checkbox'], input[type='radio'] {vertical-align:text-top;}
 .inline-block{display:inline-block;*zoom:1;*display:inline;}
 .position-fixed-cm{position:fixed;margin:auto;left:0;top:0;right:0;bottom:0;*left:50%;*top:50%;/*width:200px;height:200px;*margin-left:-100px;*margin-top:-100px;*/_position:absolute;_top:expression(eval(document.documentElement.scrollTop + document.documentElement.clientHeight/2))}
 label.forCkBoxOrRadio{cursor:pointer;-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;}
+button.slowlyChange{transition: all .2s ease-in-out;}
