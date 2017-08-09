@@ -4,7 +4,7 @@ var TaskQueue = function(){
 	/// </summary>
 
 	this._queue = [];
-	this._isWorking = false;
+	this.isWorking = false;
 
 	/// <param name="timeout" type="int">
 	/// Timeout between task.
@@ -23,7 +23,7 @@ TaskQueue.prototype.push = function(task, context, arguments){
 		"context": context,
 		"arguments": arguments
 	});
-	if(!this._isWorking){
+	if(!this.isWorking){
 		this.next();
 	}
 };
@@ -38,7 +38,7 @@ TaskQueue.prototype.unshift = function(task, context, arguments){
 		"context": context,
 		"arguments": arguments
 	});
-	if(!this._isWorking){
+	if(!this.isWorking){
 		this.next();
 	}
 };
@@ -53,10 +53,10 @@ TaskQueue.prototype.next = function(){
 	/// </summary>
 
 	if(this._queue.length == 0){
-		this._isWorking = false;
+		this.isWorking = false;
 		return;
 	}
-	this._isWorking = true;
+	this.isWorking = true;
 	var item = this._queue.shift();
 	var task = item.task;
 	var taskContext = item.context ? item.context : window;
