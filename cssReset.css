@@ -11,7 +11,8 @@ html,body{*background-image:url(about:blank);*background-attachment:fixed;}
 * {-webkit-box-sizing: border-box;-moz-box-sizing:border-box;box-sizing: border-box;/**behavior: url(css/common/boxsizing.htc);*/}
 /*select,input{*behavior:none;}*/
 /**/
-button {cursor:pointer;padding:0;outline:none;}
+button {cursor:pointer;padding:0;outline:none;user-select:none;}
+button::-moz-focus-inner{border:0;}
 input[type='checkbox'], input[type='radio'] {vertical-align:text-top;}
 /*util*/
 /*@font-face { font-family: OpenSans-Light; src: url('../font/OpenSans-Light.eot'); src: local('☺'), url('../font/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../font/OpenSans-Light.woff') format('woff'), url('../font/OpenSans-Light.ttf') format('truetype'), url('../font/OpenSans-Light.svg#webfontOTINA1xY') format('svg'); font-weight: normal; font-style: normal; }*/
