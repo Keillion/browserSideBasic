@@ -1,14 +1,11 @@
 /**
+ * Keillion modify 'onComplete', from:
+ *
  * AJAX File Upload
  * http://github.com/davgothic/AjaxFileUpload
- * 
  * Copyright (c) 2010-2013 David Hancock (http://davidhancock.co)
- *
  * Thanks to Steven Barnett for his generous contributions
- *
  * Licensed under the MIT license ( http://www.opensource.org/licenses/MIT )
- *
- * Keillion modify 'onComplete'
  */
 
 ;(function($) {
