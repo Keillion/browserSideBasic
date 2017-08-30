@@ -1,18 +1,22 @@
 $('body').append($(['<div>',
-	'<div id="kConsoleLogDiv" style="display:none;position:fixed;top:0;right:0;width:100%;height:80%;overflow-y:auto;work-break:break-all;word-wrap:break-word;background-color:rgba(0,0,0,0.5);color:white;z-index:32767;"></div>',
-	'<div style="display:none;width:100%;height:20%;position:fixed;bottom:0;work-break:break-all;word-wrap:break-word;background-color:rgba(0,0,0,0.5);z-index:32767;">',
-		'<textarea id="kConsoleTextArea" type="text" style="display:inline-block;width:90%;height:100%;"></textarea>',
-		'<button id="kConsoleBtnRun" style="display:inline-block;width:10%;height:100%;vertical-align:top;">run</button>',
+	'<div id="kConsoleLogDiv" style="display:none;position:fixed;top:0;right:0;width:100%;height:80%;overflow-y:auto;font-size:16px;line-height:24px;work-break:break-all;word-wrap:break-word;background-color:rgba(0,0,0,0.5);color:white;box-sizing:border-box;z-index:32767;"></div>',
+	'<div style="display:none;width:100%;height:20%;font-size:16px;line-height:24px;position:fixed;bottom:0;work-break:break-all;word-wrap:break-word;background-color:rgba(0,0,0,0.5);box-sizing:border-box;z-index:32767;">',
+		'<textarea id="kConsoleTextArea" type="text" style="display:inline-block;width:90%;height:100%;box-sizing:border-box;"></textarea>',
+		'<button id="kConsoleBtnRun" style="display:inline-block;width:10%;height:100%;vertical-align:top;box-sizing:border-box;">run</button>',
 	'</div>',
-	'<button id="kConsoleShowHideBtn" style="position:fixed;top:0;right:0;z-index:32767;">console</button>',
+	'<button id="kConsoleShowHideBtn" style="font-size:16px;line-height:24px;position:fixed;top:0;right:0;box-sizing:border-box;z-index:32767;">console</button>',
 '</div>'].join('')));
 kConsoleLog = function(anything, color){
 	var str = undefined;
-	try{
-		var str = JSON.stringify(anything);
-	}catch(ex){}
-	if(undefined == str){
-		str = anything.toString();
+	if(undefined === anything){
+		str = 'undefined';
+	}else{
+		try{
+			var str = JSON.stringify(anything);
+		}catch(ex){}
+		if(undefined === str){
+			str = anything.toString();
+		}
 	}
 	var kConsoleLogDiv = document.getElementById("kConsoleLogDiv");
 	var line = document.createElement("p");
