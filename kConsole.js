@@ -37,6 +37,13 @@ kConsoleError = function(anything){
 	kConsoleLog(anything, 'red');
 };
 
+/*(function(){
+	var orilog = console.log;
+	console.log = function(){
+		orilog.apply(console, arguments);
+		kConsoleLog(arguments[0]);
+	};
+})();*/
 window.addEventListener('error', function (ev) {
     var info = [
     	ev.message, "<br>",
