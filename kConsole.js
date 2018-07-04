@@ -17,7 +17,21 @@ kConsoleLog = function(anything, color){
 		str = 'undefined';
 	}else{
 		try{
-			var str = JSON.stringify(anything);
+			var str = JSON.stringify(anything, (function(){  
+				var cache = [];
+				var keyCache = []
+				return function(key, value) {
+					if (typeof value === 'object' && value !== null) {
+						var index = cache.indexOf(value);
+						if (index !== -1) {
+							return '[Circular ' + keyCache[index] + ']';
+						}
+						cache.push(value);
+						keyCache.push(key || 'root');
+					}
+					return value;
+				}
+			})());
 		}catch(ex){}
 		if(undefined === str){
 			str = anything.toString();
@@ -37,13 +51,15 @@ kConsoleError = function(anything){
 	kConsoleLog(anything, 'red');
 };
 
-/*(function(){
-	var orilog = console.log;
-	console.log = function(){
-		orilog.apply(console, arguments);
-		kConsoleLog(arguments[0]);
-	};
-})();*/
+(function(){
+	try{
+		var orilog = console.log;
+		console.log = function(){
+			orilog.apply(console, arguments);
+			kConsoleLog(arguments[0]);
+		};
+	}catch(ex){}
+})();
 window.addEventListener('error', function (ev) {
     var info = [
     	ev.message, "<br>",
