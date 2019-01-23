@@ -1,4 +1,7 @@
-/*global $*/
+/*
+ * master branch: https://github.com/Keillion/browserSideBasic Unlicense
+ */
+/*global jQuery,$*/
 var kUtil = kUtil || {};
 if(!Math.sign){
     Math.sign = function(num){
